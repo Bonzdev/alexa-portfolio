@@ -1,0 +1,21 @@
+<title>{{if .IsHome}}{{ .Title }}{{else}}{{ .Title }} | {{.Site.Title}}{{end}}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="{{ .Permalink }}" />
+<meta itemprop=name content="{{ .Title }} | {{.Site.Title}}">
+<meta itemprop=description content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
+<meta property="og:title" content="{{ .Title }} | {{.Site.Title}}">
+<meta property="og:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{.RelPermalink  | absURL }}">
+{{ template "_internal/google_analytics.html" . }}
+{{ $sass := resources.Get "sass/main.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+{{ $css := slice  $style | resources.Concat "css/bundle.css" }}
+<link rel="stylesheet" href="/css/all.min.css" media="all">
+<link rel="stylesheet" href="/css/bootstrap-4-utilities.css" media="all">
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">

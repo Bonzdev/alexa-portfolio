@@ -1,0 +1,39 @@
+.c-cover {
+  display: block;
+  margin: -8.8rem 0 4.8rem;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 53em) {
+    margin: -5.6rem -3.2rem 3.2rem;
+    padding-top: 2.4rem;
+  }
+}
+
+.c-cover__background {
+  border-radius: 0.8rem;
+  height: 40rem - 2.4rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 2.4rem;
+  z-index: 1;
+
+  @media (max-width: 53em) {
+    border-radius: 0;
+    bottom: 0;
+    height: auto;
+    top: 0;
+  }
+}
+
+.c-cover__image {
+  display: block;
+  height: auto;
+  margin: auto;
+  max-height: 40rem;
+  max-width: 100%;
+  position: relative;
+  width: auto;
+  z-index: 2;
+}

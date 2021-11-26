@@ -1,0 +1,55 @@
+{{ define "main" }}
+<div class="mb-2 ">
+    <div class="container work-detail__container c-cover mt-2" >
+      <div
+        class="c-cover__background background-gradient"
+        data-color="{{ .Params.color }}"
+      ></div>
+      <img
+        class="c-cover__image"
+        src="{{ .Params.cover_image }}"
+        alt="{{ .Title }}"
+      />
+    </div>
+    <style>
+    	.projects-link a svg{
+    		width: 20px;
+    		height: 20px;
+    	}
+    </style>
+	<div class="c-content__center pb-1">
+     	<h2 class="section__title">{{ .Title }}</h2>
+    	<span class="section__subtitle work__subtitle h4 mb-2">{{ .Params.job_type }}</span>
+      	<ul class="c-tags">
+	      {{ range split .Params.stack "•" }}
+	      <li class="c-tags__item">
+	    	<span  class="c-tags__label">
+	        	{{ . }}
+	      	</span>
+	      </li>
+		  {{ end }} 
+		</ul>
+      	<div class="container work__container">
+      		{{ .Content }}
+      		<ul class="c-tags justify-start mt-1">
+	      	  {{ if .Params.github_link }}
+		      <li class="c-tags__item ">
+		      	<a class="c-tags__label button py-1" href="{{ .Params.github_link }}" target="_blank">
+		          <i class="fab fa-github"></i> Github
+		        </a>
+		      </li>
+		      {{ end }}
+		      {{ if .Params.website_link }}
+		      <li class="c-tags__item">
+		      	<a class="c-tags__label button py-1" href="{{ .Params.website_link }}" target="_blank">
+		          <i class="fas fa-link"></i> Website 
+		        </a>
+		      </li>
+		      {{ end }}
+			</ul>
+      	</div>
+      	
+      	{{- partial "social.html" . -}}
+    </div>
+</div>
+{{end}}

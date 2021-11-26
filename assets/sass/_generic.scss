@@ -1,0 +1,72 @@
+:root {
+  --gray-900: #262829;
+  --gray-500: #454c4e;
+  --gray-400: #707d83;
+  --gray-200: #cad2d6;
+  --gray-100: #eff2f3;
+
+  --blue-700: #0053b3;
+  --blue-600: #0063c5;
+  --blue-500: #0076ff;
+  --blue-400: #4d9fff;
+  --blue-200: #b3d6ff;
+  --blue-100: #e5f1ff;
+  --blue-50: #f4f9ff;
+  --light-slate: #a8b2d1;
+  --main-color : #dc3545;
+
+  --font-stack: 'Poppins';
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-stack: 'Poppins';
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--gray-100);
+  box-sizing: border-box;
+  font: 1.6rem/2.4rem var(--font-stack, sans-serif);
+  font-feature-settings: 'ss03', 'salt';
+  height: 100%;
+  letter-spacing: -0.016em;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+}
+.text-left   { text-align: left !important; }
+.text-right  { text-align: right !important; }
+.text-center { text-align: center !important; }
+.justify-start{
+  justify-content: start !important;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// Nuxt-specific styles
+#__layout,
+#__nuxt {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  & > * {
+    flex: 1 1 auto;
+  }
+}

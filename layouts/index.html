@@ -1,0 +1,48 @@
+{{ define "main" }}
+<section class="home section mt-5" id="home">
+    <div class="home__container container grid">
+      <div class="home__content grid">
+        <div class="home__social">
+          <a
+            href="{{ .Site.Params.linkedin }}"
+            target="_blank"
+            class="home__social-icon"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="{{ .Site.Params.github }}"
+            target="_blank"
+            class="home__social-icon"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="{{ .Site.Params.dribbble }}"
+            target="_blank"
+            class="home__social-icon"
+          >
+          <i class="fab fa-dribbble"></i>
+          </a>
+        </div>
+        <div class="home__img">
+          <div class="home">
+            <img src="https://res.cloudinary.com/bonzdev/image/upload/v1622180868/bonzdev/Asset_1_raeif3.svg" class="home__blob-img">
+          </div>
+        </div>
+        <div class="home__data">
+          <h1 class="home__title">{{ .Site.Params.home_title }}</h1>
+          <h3 class="home__subtitle">{{ .Site.Params.home_subtitle }}</h3>
+          <p class="home__description">{{ .Site.Params.home_description }}</p>
+          <a
+            href="/contact"
+            class="button button--flex"
+          >
+            Contact Me  <i class="fab fa-telegram-plane button__icon"></i>
+          </a>
+         
+        </div>
+      </div>
+    </div>
+</section>
+{{ end }}

@@ -1,0 +1,39 @@
+.c-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -1.6rem;
+
+  @media (max-width: 40em) {
+    margin-top: 0;
+  }
+}
+
+.c-tags__item {
+  margin: 0 0.8rem 0.8rem 0;
+}
+
+.c-tags__label {
+  background: var(--gray-100);
+  border-radius: 0.4rem;
+  color: var(--gray-500);
+  display: block;
+  font-size: .813rem;
+  letter-spacing: 0.01rem;
+  padding: 0 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.1s linear;
+  white-space: nowrap;
+}
+
+a.c-tags__label:hover {
+  background-color: var(--blue-500);
+  border: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.lead + .c-tags {
+  margin-top: -1.6rem;
+}

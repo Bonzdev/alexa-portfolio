@@ -1,0 +1,52 @@
+.page-enter-active {
+  transition: all 0.15s ease-out;
+}
+
+.page-leave-active {
+  transition: all 0.15s ease-in;
+}
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-to,
+.page-leave {
+  opacity: 1;
+}
+
+.page-leave-to {
+  opacity: 0;
+}
+
+@keyframes enterFadeUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes enterFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.enter-fade-up {
+  animation: enterFadeUp 0.2s linear 0s 1 both;
+}
+
+.enter-fade-in {
+  animation: enterFadeIn 0.2s linear 0s 1 both;
+}
+
+@for $i from 1 through 20 {
+  .enter-delay-#{$i} {
+    animation-delay: 0.03s * $i;
+  }
+}
