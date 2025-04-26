@@ -1,6 +1,6 @@
 name = "Alexa Portfolio"
 license = "MIT"
-licenselink = https://github.com/Bonzdev/alexa-portfolio/blob/master/LICENSE"
+licenselink = "https://github.com/Bonzdev/alexa-portfolio/blob/master/LICENSE"
 description = "A highly customizable and mobile first Hugo template for personal portfolio with dark theme."
 homepage = "https://github.com/Bonzdev/alexa-portfolio"
 demosite = "https://hugo-alexa-portfolio.netlify.app/"
